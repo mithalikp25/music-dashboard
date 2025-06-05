@@ -69,18 +69,35 @@
         }
 
         .visualizer-container {
-            position: relative;
-            width: 90%;
-            max-width: 800px;
-            height: 400px;
-            margin-bottom: 40px;
-            border-radius: 20px;
-            overflow: hidden;
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
-            background: rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.2);
-        }
+    position: relative;
+    width: 90%;
+    max-width: 900px;
+    height: 450px;
+    margin: 50px auto;
+    border-radius: 25px;
+    overflow: hidden;
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.35);
+    animation: zoomFade 1.2s ease;
+    transition: transform 0.3s ease;
+}
+
+.visualizer-container:hover {
+    transform: scale(1.02);
+}
+
+@keyframes zoomFade {
+    0% {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
 
         #visualizer {
             width: 100%;
