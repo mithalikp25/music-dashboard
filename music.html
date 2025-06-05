@@ -27,10 +27,37 @@
             100% { background-position: 0% 50%; }
         }
 
+        .header {
+            text-align: center;
+            padding: 20px 0;
+            background: rgba(0, 0, 0, 0.3);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            margin-bottom: 20px;
+        }
+
+        .header h1 {
+            font-size: 2.5em;
+            font-weight: bold;
+            margin-bottom: 10px;
+            background: linear-gradient(45deg, #ff6b6b, #4ecdc4, #45b7d1);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        .header p {
+            font-size: 1.1em;
+            color: #bbb;
+            font-weight: 300;
+            letter-spacing: 1px;
+        }
+
         .container {
             position: relative;
             width: 100%;
-            height: 100vh;
+            min-height: calc(100vh - 120px);
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -226,6 +253,14 @@
         }
 
         @media (max-width: 768px) {
+            .header h1 {
+                font-size: 2em;
+            }
+            
+            .header p {
+                font-size: 1em;
+            }
+            
             .controls-panel {
                 padding: 20px;
                 width: 95%;
@@ -254,6 +289,12 @@
 </head>
 <body>
     <canvas class="particles" id="particles"></canvas>
+    
+    <div class="header">
+        <h1>🎵 Music Visualizer Pro</h1>
+        <p>Experience your music like never before with stunning visual effects</p>
+    </div>
+    
     <div class="container">
         <div class="visualizer-container">
             <canvas id="visualizer"></canvas>
@@ -300,6 +341,7 @@
             </div>
         </div>
     </div>
+<h1 style="color:antiquewhite; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; padding: 20px; margin:20px; border-color: #fff; font-size: small;">Contributed by Chirag S</h1>
 
     <audio id="audio" crossorigin="anonymous"></audio>
 
